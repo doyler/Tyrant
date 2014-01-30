@@ -37,3 +37,6 @@ nosetests.xml
 
 #authcode - DO NOT REMOVE
 authcode.txt
+
+#ideas - Todo/thinks to add/ideas, can be removed eventually
+ideas.txt
