@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 import httplib
 import hashlib
 import time
@@ -13,6 +14,8 @@ class tyrant_test(object):
         self.user_id = "982276"
         with open('authtoken.txt', 'r') as f:
 	    self.game_auth_token = f.readline()
+        self.client_code = "null"
+
         self.headers = {
             "Connection": "keep-alive",
             "Origin": "http://kg.tyrantonline.com",
@@ -32,24 +35,31 @@ class tyrant_test(object):
         #ccache.update(self.user_id)
         #ccache = ccache.hexdigest()
 
-    def init(self):
-        message = "init"
-        self.myTime = "0"
+    def getHash(self, message):
         reqHash = hashlib.md5()
         reqHash.update(message)
         reqHash.update(self.myTime)
         reqHash.update(self.time_hash)
         reqHash = reqHash.hexdigest()
+        
+
+    def init(self):
+        message = "init"
+        self.myTime = "0"
+        
     
         path = "/api.php?user_id="+self.user_id+"&message="+message
-        init = "?&flashcode="+self.flashcode+"&time="+self.myTime+"&version=&hash="+reqHash+"&ccache=&client_code=null&game_auth_token="+self.game_auth_token+"&rc=2"
+        data = "?&flashcode="+self.flashcode+"&time="+self.myTime+"&version=&hash="+reqHash+"&ccache=&client_code="+self.client_code+"&game_auth_token="+self.game_auth_token+"&rc=2"
     
         conn = httplib.HTTPConnection('kg.tyrantonline.com')
         conn.set_debuglevel(1)
-        conn.request("POST", path, init, self.headers)
+        conn.request("POST", path, data, self.headers)
 
         decompressed_data = gzip.GzipFile('', 'rb', 9, StringIO.StringIO(conn.getresponse().read())).read()
+        json_data = json.loads(decompressed_data)
         conn.close()
+        
+        self.client_code = json_data["client_code"]
 
     def getFactionNews(self):
         message = "getFactionNews"
@@ -61,7 +71,7 @@ class tyrant_test(object):
         reqHash = reqHash.hexdigest()
     
         path = "/api.php?user_id="+self.user_id+"&message="+message
-        data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+reqHash+"&ccache=&game_auth_token="+self.game_auth_token+"&rc=2"
+        data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+reqHash+"&ccache=&client_code="+str(self.client_code)+"&game_auth_token="+self.game_auth_token+"&rc=2"
 
         conn = httplib.HTTPConnection('kg.tyrantonline.com')
         conn.set_debuglevel(1)
@@ -83,7 +93,7 @@ class tyrant_test(object):
         reqHash = reqHash.hexdigest()
     
         path = "/api.php?user_id="+self.user_id+"&message="+message
-        data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+reqHash+"&ccache=&game_auth_token="+self.game_auth_token+"&rc=2"
+        data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+reqHash+"&ccache=&client_code="+str(self.client_code)+"&game_auth_token="+self.game_auth_token+"&rc=2"
 
         conn = httplib.HTTPConnection('kg.tyrantonline.com')
         conn.set_debuglevel(1)
@@ -95,5 +105,5 @@ class tyrant_test(object):
         return decompressed_data    
 
 myTyrant = tyrant_test()
-print myTyrant.init()
-#print myTyrant.getFactionMembers()
+myTyrant.init()
+print myTyrant.getFactionMembers()
