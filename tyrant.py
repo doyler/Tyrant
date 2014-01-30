@@ -13,8 +13,8 @@ class tyrant_test(object):
         self.flashcode = "c2a91a26a92020dfaa83b69814280527"
         self.faction_id = "1534002"
         self.user_id = "982276"
-        with open('authtoken.txt', 'r') as f:
-	    self.game_auth_token = f.readline()
+        with open('authcode.txt', 'r') as f:
+            self.game_auth_token = f.readline()
         self.client_code = "null"
 
         self.headers = {
@@ -181,55 +181,59 @@ class tyrant_test(object):
         
         return json_data
 
+    def battleUsersAndOutput(self, members, count):
+        myTyrant.setUserFlag("autopilot", "1") #auto-fight
+        myTyrant.setActiveDeck("3") #deck slot #3
+
+        values = []
+        valueToAdd = ''
+
+        counter = 0
+
+        for member in members["members"]:
+            valueToAdd = members["members"][member]["name"] + ":" + members["members"][member]["user_id"] + ":"
+
+            print valueToAdd
+
+            fight = myTyrant.doArenaFight(members["members"][member]["user_id"])
+            #print json.dumps(fight)
+
+            deck = myTyrant.cards[int(fight["defend_commander"])]
+            cards = []
+            cards.append(int(fight["defend_commander"]))
+
+            for key in fight["card_map"]:
+                if int(key) > 10:
+                    deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
+                    cards.append(int(fight["card_map"][key]))
+                    #print deck
+
+            valueToAdd += myTyrant.hash_encode(cards)
+            values.append(valueToAdd)
+
+            counter += 1
+
+            time.sleep(2)
+
+            if count != "MAX" and counter == count:
+                break
+
+        myTyrant.setActiveDeck("2")
+        myTyrant.setUserFlag("autopilot", "0")
+
+        with open('members_output.txt', 'wb') as f:
+            for value in values:
+                f.write(value + '\r\n')
+        
 myTyrant = tyrant_test()
 myTyrant.init()
 
 myTyrant.loadCardList()
 members = myTyrant.getFactionMembers()
 
-myTyrant.setUserFlag("autopilot", "1")
-myTyrant.setActiveDeck("3")
+myTyrant.battleUsersAndOutput(members, 1)
 
-values = []
-valueToAdd = ''
 
-counter = 0
-
-for member in members["members"]:
-    valueToAdd = members["members"][member]["name"] + ":" + members["members"][member]["user_id"] + ":"
-
-    print valueToAdd
-
-    fight = myTyrant.doArenaFight(members["members"][member]["user_id"])
-
-    #print json.dumps(fight)
-
-    deck = myTyrant.cards[int(fight["defend_commander"])]
-    cards = []
-    cards.append(int(fight["defend_commander"]))
-
-    for key in fight["card_map"]:
-        if int(key) > 10:
-            deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
-            cards.append(int(fight["card_map"][key]))
-            #print deck
-
-    valueToAdd += myTyrant.hash_encode(cards)
-    values.append(valueToAdd)
-
-    counter += 1
-
-    time.sleep(2)
-
-    #if counter == 1:
-        #break
-
-myTyrant.setActiveDeck("2")
-myTyrant.setUserFlag("autopilot", "0")
-
-with open('members_output.txt', 'wb') as f:
-    for value in values:
-        f.write(value + '\r\n')
 
 '''
 messages = myTyrant.getFactionMessages()

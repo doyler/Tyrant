@@ -40,3 +40,6 @@ authcode.txt
 
 #ideas - Todo/thinks to add/ideas, can be removed eventually
 ideas.txt
+
+#members_output.txt - output of loop, only remove if you want to share the decks you find
+members_output.txt
