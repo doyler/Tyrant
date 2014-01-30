@@ -4,6 +4,8 @@ import time
 import gzip
 import StringIO
 import json
+#import base64
+import math
 
 class tyrant_test(object):
     def __init__(self):
@@ -66,38 +68,56 @@ class tyrant_test(object):
             self.cards[int(key)] = val
 
     def hash_encode(self, cards):
-        _4000 = '-';
-        base64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-
         deck = []
         com = False
-        for card in deck:
-            if card >= 1000 and card < 2000:
-                if com: continue
+        for cid in cards:
+            if cid >= 1000 and cid < 2000:
+                print '1'
+                if com:
+                    print '2'
+                    continue
                 com = True
-                deck.insert(0, card)
+                deck.insert(0, cid)
                 continue
-            deck = card
+            print '3'
+            print '4: ' + str(deck)
+            deck.append(cid)
+            print '5: ' + str(deck)
         hash = ''
         i = 0
         while i < len(deck):
-            card = deck[i]
-            if card > 4999:
+            print '6'
+            cid = deck[i]
+            if cid > 4999:
                 #???
+                print '7'
                 continue
-            if card > 4000:
-                hash += _4000 + base64.b64encode(bytes([card - 4000]))
             else:
-                hash += base64.b64encode(bytes([card]))
+                print '8'
+                print '9: ' + str(cid)
+                hash += self.base64encode(cid)
+                print '10: ' + hash
             cnt = 0
-            while i < len(deck) and deck[i] == card:
+            while i < len(deck) and deck[i] == cid:
                 # finding multiplier?
                 cnt += 1
                 i += 1
             if cnt > 1:
                 # adding multiplier
-                hash += base64.b64encode(bytes([4000 + cnt]))
+                hash += self.base64encode(4000 + cid)
         return hash
+
+    def base64encode(self, card):
+        offset = 0
+        extra_char = ''
+        if card > 4000:
+            offset = 4000
+            card -= 4000
+            extra_char = '-'
+        base64string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+        first_char = base64string[int(math.floor(card/64))]
+        second_char = base64string[card%64]
+        return extra_char + '' + first_char + '' + second_char
 
     def init(self):
         message = "init"
@@ -165,30 +185,31 @@ class tyrant_test(object):
 myTyrant = tyrant_test()
 myTyrant.init()
 
-myTyrant.setUserFlag("autopilot", "1")
-myTyrant.setActiveDeck("3")
-fight = myTyrant.doArenaFight("5871864") #nether
+members = myTyrant.getFactionMembers()
 
-myTyrant.loadCardList()
+for member in members["members"]:
+    print members["members"][member]["name"] + ": " + members["members"][member]["user_id"]
+    #print member["name"] + ": " + member["user_id"]
 
-deck = myTyrant.cards[int(fight["defend_commander"])]
-cards = myTyrant.cards[int(fight["defend_commander"])]
+#myTyrant.setUserFlag("autopilot", "1")
+#myTyrant.setActiveDeck("3")
+#fight = myTyrant.doArenaFight("5871864") #nether
 
-for key in fight["card_map"]:
-    if int(key) > 10:
-        deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
-        cards += fight["card_map"][key]
+#myTyrant.loadCardList()
 
-print deck
-print cards
+#deck = myTyrant.cards[int(fight["defend_commander"])]
+#cards = []
+#cards.append(int(fight["defend_commander"]))
 
-print myTyrant.hash_encode('HASH: ' + cards)
+#for key in fight["card_map"]:
+    #if int(key) > 10:
+        #deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
+        #cards.append(int(fight["card_map"][key]))
 
-#for key, value in fight["turn"].iteritems():
-    #print "\n" + str(key) + "  -  " + str(value)
+#print 'HASH: ' + myTyrant.hash_encode(cards)
 
-myTyrant.setActiveDeck("2")
-myTyrant.setUserFlag("autopilot", "0")
+#myTyrant.setActiveDeck("2")
+#myTyrant.setUserFlag("autopilot", "0")
 
 '''
 messages = myTyrant.getFactionMessages()
