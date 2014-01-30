@@ -29,8 +29,11 @@ class tyrant_test(object):
         self.time_hash = "fgjk380vf34078oi37890ioj43"
         self.myTime = str(int(time.time())/900)
 
+        self.path = "/api.php?user_id="+self.user_id+"&message="
+        self.data = data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+self.getHash(self.myTime, message)+"&ccache=&client_code="+str(self.client_code)+"&game_auth_token="+self.game_auth_token+"&rc=2"
+
         self.conn = httplib.HTTPConnection('kg.tyrantonline.com')
-        self.conn.set_debuglevel(1)
+        self.conn.set_debuglevel(0)
 
         #ccache = hashlib.md5()
         #ccache.update(self.myTime)
@@ -43,15 +46,15 @@ class tyrant_test(object):
         reqHash.update(self.myTime)
         reqHash.update(self.time_hash)
         reqHash = reqHash.hexdigest()
-        
+
+        return reqHash
 
     def init(self):
         message = "init"
-        
-        path = "/api.php?user_id="+self.user_id+"&message="+message
+
         data = "?&flashcode="+self.flashcode+"&time="+self.myTime+"&version=&hash="+self.getHash("0", message)+"&ccache=&client_code="+self.client_code+"&game_auth_token="+self.game_auth_token+"&rc=2"
         
-        self.conn.request("POST", path, data, self.headers)
+        self.conn.request("POST", self.path+message, data, self.headers)
 
         decompressed_data = gzip.GzipFile('', 'rb', 9, StringIO.StringIO(self.conn.getresponse().read())).read()
         json_data = json.loads(decompressed_data)
@@ -61,11 +64,8 @@ class tyrant_test(object):
 
     def getFactionNews(self):
         message = "getFactionNews"
-            
-        path = "/api.php?user_id="+self.user_id+"&message="+message
-        data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+self.getHash(self.myTime, message)+"&ccache=&client_code="+str(self.client_code)+"&game_auth_token="+self.game_auth_token+"&rc=2"
 
-        self.conn.request("POST", path, data, self.headers)
+        self.conn.request("POST", self.path+message, self.data, self.headers)
 
         decompressed_data = gzip.GzipFile('', 'rb', 9, StringIO.StringIO(self.conn.getresponse().read())).read()
         json_data = json.loads(decompressed_data)
@@ -75,11 +75,8 @@ class tyrant_test(object):
 
     def getFactionMembers(self):
         message = "getFactionMembers"
-    
-        path = "/api.php?user_id="+self.user_id+"&message="+message
-        data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+self.getHash(self.myTime, message)+"&ccache=&client_code="+str(self.client_code)+"&game_auth_token="+self.game_auth_token+"&rc=2"
 
-        self.conn.request("POST", path, data, self.headers)
+        self.conn.request("POST", self.path+message, self.data, self.headers)
 
         decompressed_data = gzip.GzipFile('', 'rb', 9, StringIO.StringIO(self.conn.getresponse().read())).read()
         
