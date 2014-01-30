@@ -65,6 +65,40 @@ class tyrant_test(object):
             (key, val) = line.rstrip('\n').split(':')
             self.cards[int(key)] = val
 
+    def hash_encode(self, cards):
+        _4000 = '-';
+        base64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+
+        deck = []
+        com = False
+        for card in deck:
+            if card >= 1000 and card < 2000:
+                if com: continue
+                com = True
+                deck.insert(0, card)
+                continue
+            deck = card
+        hash = ''
+        i = 0
+        while i < len(deck):
+            card = deck[i]
+            if card > 4999:
+                #???
+                continue
+            if card > 4000:
+                hash += _4000 + base64.b64encode(bytes([card - 4000]))
+            else:
+                hash += base64.b64encode(bytes([card]))
+            cnt = 0
+            while i < len(deck) and deck[i] == card:
+                # finding multiplier?
+                cnt += 1
+                i += 1
+            if cnt > 1:
+                # adding multiplier
+                hash += base64.b64encode(bytes([4000 + cnt]))
+        return hash
+
     def init(self):
         message = "init"
 
@@ -138,12 +172,17 @@ fight = myTyrant.doArenaFight("5871864") #nether
 myTyrant.loadCardList()
 
 deck = myTyrant.cards[int(fight["defend_commander"])]
+cards = myTyrant.cards[int(fight["defend_commander"])]
 
 for key in fight["card_map"]:
     if int(key) > 10:
         deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
+        cards += fight["card_map"][key]
 
 print deck
+print cards
+
+print myTyrant.hash_encode('HASH: ' + cards)
 
 #for key, value in fight["turn"].iteritems():
     #print "\n" + str(key) + "  -  " + str(value)
