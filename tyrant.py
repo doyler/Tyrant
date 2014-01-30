@@ -34,7 +34,7 @@ class tyrant_test(object):
         #ccache.update(self.user_id)
         #ccache = ccache.hexdigest()
 
-        self.cards = []
+        self.cards = {}
 
     def getHash(self, time, message):
         reqHash = hashlib.md5()
@@ -61,7 +61,9 @@ class tyrant_test(object):
         return decompressed_data
 
     def loadCardList(self):
-        self.cards = [line.split(':').rstrip('\n') for line in open('cardlist.txt')]
+        for line in open('cardlist.txt'):
+            (key, val) = line.rstrip('\n').split(':')
+            self.cards[int(key)] = val
 
     def init(self):
         message = "init"
@@ -134,10 +136,14 @@ myTyrant.setActiveDeck("3")
 fight = myTyrant.doArenaFight("5871864") #nether
 
 myTyrant.loadCardList()
-print myTyrant.cards
+
+deck = myTyrant.cards[int(fight["defend_commander"])]
+
 for key in fight["card_map"]:
     if int(key) > 10:
-        print fight["card_map"][key]
+        deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
+
+print deck
 
 #for key, value in fight["turn"].iteritems():
     #print "\n" + str(key) + "  -  " + str(value)
