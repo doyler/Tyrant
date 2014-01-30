@@ -72,31 +72,24 @@ class tyrant_test(object):
         com = False
         for cid in cards:
             if cid >= 1000 and cid < 2000:
-                print '1'
                 if com:
-                    print '2'
                     continue
                 com = True
                 deck.insert(0, cid)
                 continue
-            print '3'
-            print '4: ' + str(deck)
             deck.append(cid)
-            print '5: ' + str(deck)
         hash = ''
         i = 0
         while i < len(deck):
-            print '6'
             cid = deck[i]
             if cid > 4999:
                 #???
                 print '7'
                 continue
             else:
-                print '8'
-                print '9: ' + str(cid)
+                #print '9: ' + str(cid)
                 hash += self.base64encode(cid)
-                print '10: ' + hash
+                #print '10: ' + hash
             cnt = 0
             while i < len(deck) and deck[i] == cid:
                 # finding multiplier?
@@ -104,7 +97,7 @@ class tyrant_test(object):
                 i += 1
             if cnt > 1:
                 # adding multiplier
-                hash += self.base64encode(4000 + cid)
+                hash += self.base64encode(4000 + cnt)
         return hash
 
     def base64encode(self, card):
@@ -112,10 +105,14 @@ class tyrant_test(object):
         extra_char = ''
         if card > 4000:
             offset = 4000
-            card -= 4000
+            #print 'marco: ' + str(card)
+            card = card - 4000
+            #print 'polo: ' + str(card)
             extra_char = '-'
         base64string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+        #print 'f of card: ' + str(card) + ' is: ' + str(int(math.floor(card/64)))
         first_char = base64string[int(math.floor(card/64))]
+        #print 's of card: ' + str(card) + ' is: ' + str(card%64)
         second_char = base64string[card%64]
         return extra_char + '' + first_char + '' + second_char
 
@@ -185,31 +182,42 @@ class tyrant_test(object):
 myTyrant = tyrant_test()
 myTyrant.init()
 
+myTyrant.loadCardList()
 members = myTyrant.getFactionMembers()
 
+myTyrant.setUserFlag("autopilot", "1")
+myTyrant.setActiveDeck("3")
+
+values = []
+valueToAdd = ''
+
 for member in members["members"]:
-    print members["members"][member]["name"] + ": " + members["members"][member]["user_id"]
-    #print member["name"] + ": " + member["user_id"]
+    valueToAdd = members["members"][member]["name"] + " : " + members["members"][member]["user_id"] + " : "
 
-#myTyrant.setUserFlag("autopilot", "1")
-#myTyrant.setActiveDeck("3")
-#fight = myTyrant.doArenaFight("5871864") #nether
+    print valueToAdd
 
-#myTyrant.loadCardList()
+    fight = myTyrant.doArenaFight(members["members"][member]["user_id"])
 
-#deck = myTyrant.cards[int(fight["defend_commander"])]
-#cards = []
-#cards.append(int(fight["defend_commander"]))
+    print json.dumps(fight)
 
-#for key in fight["card_map"]:
-    #if int(key) > 10:
-        #deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
-        #cards.append(int(fight["card_map"][key]))
+    deck = myTyrant.cards[int(fight["defend_commander"])]
+    cards = []
+    cards.append(int(fight["defend_commander"]))
 
-#print 'HASH: ' + myTyrant.hash_encode(cards)
+    for key in fight["card_map"]:
+        if int(key) > 10:
+            deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
+            cards.append(int(fight["card_map"][key]))
 
-#myTyrant.setActiveDeck("2")
-#myTyrant.setUserFlag("autopilot", "0")
+    valueToAdd += myTyrant.hash_encode(cards)
+    values += valueToAdd
+
+myTyrant.setActiveDeck("2")
+myTyrant.setUserFlag("autopilot", "0")
+
+with open('members_output.txt', 'wb') as f:
+    for value in values:
+        f.write(value + '\n')
 
 '''
 messages = myTyrant.getFactionMessages()
