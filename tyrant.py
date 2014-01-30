@@ -79,8 +79,28 @@ class tyrant_test(object):
         response = self.sendRequestDecompressResponse(message)
         json_data = json.loads(response)
         
-        return json_data    
+        return json_data
+
+    def getFactionMessages(self):
+        message = "getFactionMessages"
+
+        response = self.sendRequestDecompressResponse(message)
+        json_data = json.loads(response)
+        
+        return json_data
+
+    def getMap(self):
+        message = "getConquestMap"
+
+        response = self.sendRequestDecompressResponse(message)
+        json_data = json.loads(response)
+        
+        return json_data   
 
 myTyrant = tyrant_test()
 myTyrant.init()
-print myTyrant.getFactionMembers()
+
+messages = myTyrant.getFactionMessages()
+
+for line in messages["messages"]:
+    print line["message"]
