@@ -5,7 +5,6 @@ import gzip
 import StringIO
 import json
 import math
-import time
 
 class tyrant_test(object):
     def __init__(self):
@@ -16,7 +15,6 @@ class tyrant_test(object):
         with open('authcode.txt', 'r') as f:
             self.game_auth_token = f.readline()
         self.client_code = "null"
-
         self.headers = {
             "Connection": "keep-alive",
             "Origin": "http://kg.tyrantonline.com",
@@ -27,15 +25,12 @@ class tyrant_test(object):
             "Accept-Encoding": "gzip,deflate,sdch",
             "Accept-Language": "en-US,en;q=0.8"
         }
-
         self.time_hash = "fgjk380vf34078oi37890ioj43"
         self.myTime = str(int(time.time())/900)
-
         #ccache = hashlib.md5()
         #ccache.update(self.myTime)
         #ccache.update(self.user_id)
         #ccache = ccache.hexdigest()
-
         self.cards = {}
 
     def getHash(self, time, message):
@@ -44,7 +39,6 @@ class tyrant_test(object):
         reqHash.update(self.myTime)
         reqHash.update(self.time_hash)
         reqHash = reqHash.hexdigest()
-
         return reqHash
 
     def sendRequestDecompressResponse(self, message, additional):
@@ -53,13 +47,11 @@ class tyrant_test(object):
             data = "?&flashcode="+self.flashcode+"&time=0&version=&hash="+self.getHash("0", message)+"&ccache=&client_code="+self.client_code+"&game_auth_token="+self.game_auth_token+"&rc=2"
         else:
             data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+self.getHash(self.myTime, message)+"&ccache=&client_code="+str(self.client_code)+"&game_auth_token="+self.game_auth_token+"&rc=2"+additional
-
         conn = httplib.HTTPConnection('kg.tyrantonline.com')
         conn.set_debuglevel(0)
         conn.request("POST", path, data, self.headers)
         decompressed_data = gzip.GzipFile('', 'rb', 9, StringIO.StringIO(conn.getresponse().read())).read()
         conn.close()
-
         return decompressed_data
 
     def loadCardList(self):
@@ -120,124 +112,85 @@ class tyrant_test(object):
 
     def init(self):
         message = "init"
-
         response = self.sendRequestDecompressResponse(message, "")
         json_data = json.loads(response)
         self.client_code = json_data["client_code"]
 
     def setUserFlag(self, flag, value):
         message = "setUserFlag"
-
         response = self.sendRequestDecompressResponse(message, "&flag="+flag+"&value="+value)
         json_data = json.loads(response)
-        
         return json_data
 
     def setActiveDeck(self, deck):
         message = "setActiveDeck"
-
         response = self.sendRequestDecompressResponse(message, "&deck_id="+deck)
         json_data = json.loads(response)
-        
         return json_data
 
     def getFactionNews(self):
         message = "getFactionNews"
-
         response = self.sendRequestDecompressResponse(message, "")
         json_data = json.loads(response)
-        
         return json_data
 
     def getFactionMembers(self):
         message = "getFactionMembers"
-
         response = self.sendRequestDecompressResponse(message, "")
         json_data = json.loads(response)
-        
         return json_data
 
     def getFactionMessages(self):
         message = "getFactionMessages"
-
         response = self.sendRequestDecompressResponse(message, "")
         json_data = json.loads(response)
-        
         return json_data
 
     def getMap(self):
         message = "getConquestMap"
-
         response = self.sendRequestDecompressResponse(message, "")
         json_data = json.loads(response)
-        
         return json_data
 
     def doArenaFight(self, enemy):
         message = "doArenaFight"
-
         response = self.sendRequestDecompressResponse(message, "&enemy_id="+enemy)
         json_data = json.loads(response)
-        
         return json_data
 
     def battleUsersAndOutput(self, members, count):
         myTyrant.setUserFlag("autopilot", "1") #auto-fight
         myTyrant.setActiveDeck("3") #deck slot #3
-
         values = []
         valueToAdd = ''
-
         counter = 0
-
         for member in members["members"]:
             valueToAdd = members["members"][member]["name"] + ":" + members["members"][member]["user_id"] + ":"
-
             print valueToAdd
-
             fight = myTyrant.doArenaFight(members["members"][member]["user_id"])
             #print json.dumps(fight)
-
             deck = myTyrant.cards[int(fight["defend_commander"])]
             cards = []
             cards.append(int(fight["defend_commander"]))
-
             for key in fight["card_map"]:
                 if int(key) > 10:
                     deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
                     cards.append(int(fight["card_map"][key]))
                     #print deck
-
             valueToAdd += myTyrant.hash_encode(cards)
             values.append(valueToAdd)
-
             counter += 1
-
             time.sleep(2)
-
             if count != "MAX" and counter == count:
                 break
-
         myTyrant.setActiveDeck("2")
         myTyrant.setUserFlag("autopilot", "0")
-
         with open('members_output.txt', 'wb') as f:
             for value in values:
                 f.write(value + '\r\n')
         
 myTyrant = tyrant_test()
 myTyrant.init()
-
 myTyrant.loadCardList()
 members = myTyrant.getFactionMembers()
-
 myTyrant.battleUsersAndOutput(members, 1)
-
-
-
-'''
-messages = myTyrant.getFactionMessages()
-
-for line in messages["messages"]:
-    print line["message"]
-    '''
