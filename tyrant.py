@@ -13,7 +13,6 @@ class tyrant_test(object):
         self.user_id = "982276"
         with open('authtoken.txt', 'r') as f:
 	    self.game_auth_token = f.readline()
-
         self.headers = {
             "Connection": "keep-alive",
             "Origin": "http://kg.tyrantonline.com",
@@ -51,13 +50,15 @@ class tyrant_test(object):
 
         decompressed_data = gzip.GzipFile('', 'rb', 9, StringIO.StringIO(conn.getresponse().read())).read()
 
-        #message = "getFactionNews"
-        #data = "faction_id="+self.faction_id+"&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+reqHash+"&ccache="+ccache+"&game_auth_token="+self.game_auth_token
+        message = "getFactionNews"
+        data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+reqHash+"&ccache=&game_auth_token="+self.game_auth_token+"&rc=2"
 
+        conn.request("POST", path, data, self.headers)
 
-        #decompressed_data = gzip.GzipFile('', 'rb', 9, StringIO.StringIO(conn.getresponse().read())).read()
+        decompressed_data = gzip.GzipFile('', 'rb', 9, StringIO.StringIO(conn.getresponse().read())).read()
+        
         conn.close()
         return decompressed_data
 
 myTyrant = tyrant_test()
-print myTyrant.getFactionMembers()
+print myTyrant.getFactionMembers()	    
