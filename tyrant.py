@@ -73,7 +73,7 @@ class tyrant_test(object):
         conn.close()
         return decompressed_data
 
-def getFactionMembers(self):
+    def getFactionMembers(self):
         message = "getFactionMembers"
         self.myTime = str(int(time.time())/900)
         ccache = hashlib.md5()
