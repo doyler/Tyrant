@@ -4,8 +4,8 @@ import time
 import gzip
 import StringIO
 import json
-#import base64
 import math
+import time
 
 class tyrant_test(object):
     def __init__(self):
@@ -79,9 +79,11 @@ class tyrant_test(object):
                 continue
             deck.append(cid)
         hash = ''
+        deck.sort()
         i = 0
         while i < len(deck):
             cid = deck[i]
+            #print deck
             if cid > 4999:
                 #???
                 print '7'
@@ -92,12 +94,12 @@ class tyrant_test(object):
                 #print '10: ' + hash
             cnt = 0
             while i < len(deck) and deck[i] == cid:
-                # finding multiplier?
                 cnt += 1
                 i += 1
             if cnt > 1:
-                # adding multiplier
-                hash += self.base64encode(4000 + cnt)
+                #print '11: ' + str(cnt)
+                hash += self.base64encode(8000 + cnt)
+                #print '12: ' + hash
         return hash
 
     def base64encode(self, card):
@@ -191,14 +193,16 @@ myTyrant.setActiveDeck("3")
 values = []
 valueToAdd = ''
 
+counter = 0
+
 for member in members["members"]:
-    valueToAdd = members["members"][member]["name"] + " : " + members["members"][member]["user_id"] + " : "
+    valueToAdd = members["members"][member]["name"] + ":" + members["members"][member]["user_id"] + ":"
 
     print valueToAdd
 
     fight = myTyrant.doArenaFight(members["members"][member]["user_id"])
 
-    print json.dumps(fight)
+    #print json.dumps(fight)
 
     deck = myTyrant.cards[int(fight["defend_commander"])]
     cards = []
@@ -208,16 +212,24 @@ for member in members["members"]:
         if int(key) > 10:
             deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
             cards.append(int(fight["card_map"][key]))
+            #print deck
 
     valueToAdd += myTyrant.hash_encode(cards)
-    values += valueToAdd
+    values.append(valueToAdd)
+
+    counter += 1
+
+    time.sleep(2)
+
+    #if counter == 1:
+        #break
 
 myTyrant.setActiveDeck("2")
 myTyrant.setUserFlag("autopilot", "0")
 
 with open('members_output.txt', 'wb') as f:
     for value in values:
-        f.write(value + '\n')
+        f.write(value + '\r\n')
 
 '''
 messages = myTyrant.getFactionMessages()
