@@ -73,10 +73,18 @@ class tyrant_test(object):
         
         return json_data
 
+    def setActiveDeck(self, deck):
+        message = "setActiveDeck"
+
+        response = self.sendRequestDecompressResponse(message, "&deck_id="+deck)
+        json_data = json.loads(response)
+        
+        return json_data
+
     def getFactionNews(self):
         message = "getFactionNews"
 
-        response = self.sendRequestDecompressResponse(message)
+        response = self.sendRequestDecompressResponse(message, "")
         json_data = json.loads(response)
         
         return json_data
@@ -84,7 +92,7 @@ class tyrant_test(object):
     def getFactionMembers(self):
         message = "getFactionMembers"
 
-        response = self.sendRequestDecompressResponse(message)
+        response = self.sendRequestDecompressResponse(message, "")
         json_data = json.loads(response)
         
         return json_data
@@ -100,15 +108,38 @@ class tyrant_test(object):
     def getMap(self):
         message = "getConquestMap"
 
-        response = self.sendRequestDecompressResponse(message)
+        response = self.sendRequestDecompressResponse(message, "")
         json_data = json.loads(response)
         
-        return json_data   
+        return json_data
+
+    def doArenaFight(self, enemy):
+        message = "doArenaFight"
+
+        response = self.sendRequestDecompressResponse(message, "&enemy_id="+enemy)
+        json_data = json.loads(response)
+        
+        return json_data
 
 myTyrant = tyrant_test()
 myTyrant.init()
 
-print myTyrant.setUserFlag("autopilot", "0")
+myTyrant.setUserFlag("autopilot", "1")
+myTyrant.setActiveDeck("3")
+fight = myTyrant.doArenaFight("5871864") #nether
+
+for key, value in fight.iteritems():
+    print key
+    #if type(value) == type(['']):
+            #for sub_value in value:
+                #strg = str(json.dumps(sub_value))
+                #for key2, value2 in strg.iteritems():
+                    #print key2
+    #else:
+        #print value
+
+myTyrant.setActiveDeck("2")
+myTyrant.setUserFlag("autopilot", "0")
 
 '''
 messages = myTyrant.getFactionMessages()
