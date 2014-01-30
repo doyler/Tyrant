@@ -43,12 +43,12 @@ class tyrant_test(object):
 
         return reqHash
 
-    def sendRequestDecompressResponse(self, message):
+    def sendRequestDecompressResponse(self, message, additional):
         path = "/api.php?user_id="+self.user_id+"&message="+message
         if message == "init":
             data = "?&flashcode="+self.flashcode+"&time=0&version=&hash="+self.getHash("0", message)+"&ccache=&client_code="+self.client_code+"&game_auth_token="+self.game_auth_token+"&rc=2"
         else:
-            data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+self.getHash(self.myTime, message)+"&ccache=&client_code="+str(self.client_code)+"&game_auth_token="+self.game_auth_token+"&rc=2"
+            data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+self.getHash(self.myTime, message)+"&ccache=&client_code="+str(self.client_code)+"&game_auth_token="+self.game_auth_token+"&rc=2"+additional
 
         conn = httplib.HTTPConnection('kg.tyrantonline.com')
         conn.set_debuglevel(0)
@@ -61,9 +61,17 @@ class tyrant_test(object):
     def init(self):
         message = "init"
 
-        response = self.sendRequestDecompressResponse(message)
+        response = self.sendRequestDecompressResponse(message, "")
         json_data = json.loads(response)
         self.client_code = json_data["client_code"]
+
+    def setUserFlag(self, flag, value):
+        message = "setUserFlag"
+
+        response = self.sendRequestDecompressResponse(message, "&flag="+flag+"&value="+value)
+        json_data = json.loads(response)
+        
+        return json_data
 
     def getFactionNews(self):
         message = "getFactionNews"
@@ -84,7 +92,7 @@ class tyrant_test(object):
     def getFactionMessages(self):
         message = "getFactionMessages"
 
-        response = self.sendRequestDecompressResponse(message)
+        response = self.sendRequestDecompressResponse(message, "")
         json_data = json.loads(response)
         
         return json_data
@@ -100,7 +108,11 @@ class tyrant_test(object):
 myTyrant = tyrant_test()
 myTyrant.init()
 
+print myTyrant.setUserFlag("autopilot", "0")
+
+'''
 messages = myTyrant.getFactionMessages()
 
 for line in messages["messages"]:
     print line["message"]
+    '''
