@@ -27,8 +27,7 @@ class tyrant_test(object):
         self.time_hash = "fgjk380vf34078oi37890ioj43"
         self.myTime = str(int(time.time())/900)
 
-    def getFactionMembers(self):
-        #message = "getFactionMembers"
+    def init(self):
         message = "init"
         self.myTime = "0"
         ccache = hashlib.md5()
@@ -49,8 +48,22 @@ class tyrant_test(object):
         conn.request("POST", path, init, self.headers)
 
         decompressed_data = gzip.GzipFile('', 'rb', 9, StringIO.StringIO(conn.getresponse().read())).read()
+        conn.close()
 
+    def getFactionNews(self):
         message = "getFactionNews"
+        self.myTime = "0"
+        ccache = hashlib.md5()
+        ccache.update(self.myTime)
+        ccache.update(self.user_id)
+        ccache = ccache.hexdigest()
+        reqHash = hashlib.md5()
+        reqHash.update(message)
+        reqHash.update(self.myTime)
+        reqHash.update(self.time_hash)
+        reqHash = reqHash.hexdigest()
+    
+        path = "/api.php?user_id="+self.user_id+"&message="+message
         data = "&flashcode="+self.flashcode+"&time="+self.myTime+"&version="+self.version+"&hash="+reqHash+"&ccache=&game_auth_token="+self.game_auth_token+"&rc=2"
 
         conn.request("POST", path, data, self.headers)
@@ -61,4 +74,5 @@ class tyrant_test(object):
         return decompressed_data
 
 myTyrant = tyrant_test()
-print myTyrant.getFactionMembers()	    
+myTyrant.init()
+print myTyrant.getFactionMembers()
