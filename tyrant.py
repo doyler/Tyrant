@@ -8,11 +8,12 @@ import json
 class tyrant_test(object):
     def __init__(self):
         self.version = "2.9.17"
-        self.flashcode = "a15083d47726a8f1e7f9247ab2cb3e23"
+        self.flashcode = "c2a91a26a92020dfaa83b69814280527"
         self.faction_id = "1534002"
         self.user_id = "982276"
-	with open('authtoken.txt', 'r') as f:
+        with open('authtoken.txt', 'r') as f:
 	    self.game_auth_token = f.readline()
+
         self.headers = {
             "Connection": "keep-alive",
             "Origin": "http://kg.tyrantonline.com",
@@ -56,7 +57,7 @@ class tyrant_test(object):
 
         #decompressed_data = gzip.GzipFile('', 'rb', 9, StringIO.StringIO(conn.getresponse().read())).read()
         conn.close()
-        #return decompressed_data
+        return decompressed_data
 
 myTyrant = tyrant_test()
 print myTyrant.getFactionMembers()
