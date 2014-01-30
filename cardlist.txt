@@ -1,0 +1,1561 @@
+1:Infantry
+2:Grunt
+3:Infiltrator
+4:Hawkeye
+5:Barrage Tank
+6:Rocket Infantry
+7:Chopper
+8:Rally Infantry
+9:Dreadnaught
+10:Tempest
+11:Bazooka Marine
+13:Heavy Infantry
+14:Medic
+15:Tarantula
+16:Artemis Tank
+17:Zealot
+18:Marine
+19:Exterminator
+20:Cyclone
+21:Devastator
+22:Terminator
+23:Dozer Tank
+24:Vampire
+25:Bonestalker
+26:Blitz Armor
+27:Blood Rider
+28:Drones
+29:Dread Panzer
+30:Predator
+31:Hyperion Prototype
+32:Dracus Wyrm
+33:Flame Guard
+34:Auger Tank
+35:Trap Setter
+36:Sarcous Grub
+37:Hunter
+38:Sawblade
+39:Stormrunner
+40:Aegis
+41:Dominated Hatchlings
+42:Chimera
+43:Marauder
+44:Plague Duster
+45:Orbo
+46:Blight Golem
+47:Mech Walker
+48:Valkyrie
+49:Grinder
+50:Vorpal Tank
+51:Orca
+53:Scorpion
+54:Bolide Walker
+55:Knight
+56:Gore Crawler
+57:Ravager
+58:Razor
+59:Hydroblade
+60:Piranha
+61:Xeno Interceptor
+62:Diesel
+63:Sabre
+64:Tank Buster
+66:Allogarb
+67:Impulse Walker
+68:Cerberus
+69:Nightmare
+70:Brood Walker
+71:Xeno Mauler
+72:Exodrone
+73:Goliath
+74:Tremor Hunter
+75:Enclave Warlord
+76:Immortal
+77:Reaper
+78:X-5 Penetrator
+79:Marksman
+80:Sneaky Brute
+81:Enclave Arbiter
+82:Echo Hunter
+83:Shock Grunt
+84:Aquabat
+85:Dune Runner
+86:Sharpshooter
+88:Nightstalker
+89:Hornet Drones
+90:Jet Trooper
+91:Pyro Rig
+92:Cannon Walker
+93:Swift Troops
+94:Dragoon Hunters
+95:Arc Trooper
+96:Razor Hawk
+97:Carcass Scrounge
+99:Daemon
+100:Revolver
+101:Sand Crawler
+102:Obsidian
+103:Tiamat
+104:Poseidon
+105:Havoc
+106:Tremor Wyrm
+107:Locust Swarm
+108:Banshee
+109:Annelid Mass
+110:Smog Tank
+111:Blood Spout
+112:Abomination
+113:Hatchet
+114:Sanguiphage
+115:Blood Grunt
+116:Draconian Queen
+117:Berzerker
+118:Saw Tank
+119:Infected Grunt
+121:Chronos
+122:Dominator
+123:Gunjack
+124:Bombardment Tanks
+125:Pelican
+126:Pathrazer
+127:Achawin
+128:Quad Walker
+129:Exosoldier
+130:Juggernaut
+131:Beholder
+132:Mobile Extractor
+133:Sulfuris Sentry
+134:Blinding Apprentice
+135:Desolate Sage
+136:Longshot
+137:Stagger Shooter
+139:Monsoon X
+140:Beam Cannon
+141:Neocyte Guard
+142:Cybertron
+143:Hydra
+144:Blight Ooze
+145:Rabid Corruptor
+146:Dreadship
+147:Median
+148:Enfeebler
+149:Tyr's Hunter
+150:Reshaper Tank
+151:Glaive
+152:Enclave Champion
+153:Monstrosity
+154:Speculus
+155:Shiver
+156:Ragnarok
+157:Tainted Blade
+158:Abolisher
+159:Xeno Mothership
+160:Enclave Parasite
+161:Gravity Tank
+162:Spine Crawler
+163:Spectre
+164:Mind Controller
+165:Ghost
+166:Crypt Mercenary
+168:Combat Specialist
+169:Moloch
+170:Scavenger
+171:Phoenix
+172:Feral Scorpion
+173:Rifter
+174:Mobile Magnacannon
+175:Heavy Gunner
+176:Tunneller
+177:Support Buzzer
+178:Hypastryx
+179:Micromech
+180:Kraken
+181:Acid Spewer
+183:Fury Walker
+184:Scorpinox
+185:Invasion Scouts
+186:Titan
+187:Polluted Blaster
+189:Barracuda
+190:Recurring Darkness
+192:Trident
+194:World Quaker
+195:Manta
+197:Anvil
+198:Ravenous Beast
+200:Mawcor
+201:Lummox
+202:Ion Strykers
+203:Front Line Warrior
+204:Blight Crusher
+205:Pummeller
+206:Vaporwing
+207:Infernal Strangler
+208:Muon Walker
+209:Cavern Smelter
+210:APC
+211:Imitation Tank
+212:Enclave Remnant
+213:Merciless Invader
+214:Hierophant
+215:Lodestar
+217:Groteske
+220:Helios
+221:Colossus
+222:Sky Watcher
+225:Shapeshifter
+230:Incinerator
+231:Venomous Raptor
+232:Stealth Dispatcher
+237:Bulldozer
+238:Irradiated Infantry
+239:Tactical Infiltrator
+240:Azure Reaper
+241:Ixnedrone
+242:Plague Wyrm
+243:Safeguard
+244:Remote Analyzer
+245:Toxic Cannon
+246:Nimbus
+247:Omega
+248:Malgoth
+249:Apex
+250:Purity Golem
+251:Amorphous Wretch
+252:Force Breaker
+253:Black Ops
+254:Demolition Bot
+255:Festerich
+256:Parasite
+257:Gargantuan
+258:Missile Launcher
+259:Fortifier
+260:Gun Raven
+261:Stealthy Niaq
+262:Pouncer
+263:Fenrir
+264:Mad Cur
+265:Crippler
+266:Mass Infester
+267:Intruder
+268:Cultivator
+269:Seeker
+270:Jericho
+271:Naval Bombarder
+272:Flanker
+273:Infectious Stalker
+274:Warped Infiltrator
+275:Absolver
+276:Savage Brute
+277:Guerilla
+278:Overwhelming Swarm
+279:Impaler
+280:Wicked Mantis
+281:Onslaught Lead
+282:Marmoda
+283:Cluster Ballista
+284:Avenger
+285:Disruptor
+286:Bio Drone
+287:Loki's Scion
+288:Sentry
+289:Valefar
+290:Howitzer
+291:Odin
+292:Heartripper
+293:Raging Prowler
+294:Credo Mech
+295:Slasher
+296:Redeemer
+297:Drill Mech
+298:Corrosive Fiend
+299:Flesheater
+300:Cypher
+301:Cycle Mech
+302:Lumbering Ogre
+303:Whiplash
+304:Fighter Jet
+305:Zerbur
+306:Myrmidon
+307:Hellion
+308:Carrion Retriever
+309:Scatter Division
+310:Sustainer Xolan
+311:Metalhead
+312:Splinterwing
+313:Destroyer
+314:Zero
+315:Grim Specter
+316:Zutturghast
+317:Concussive Guard
+318:Enforcer Mech
+319:Vanquisher
+320:Gruesome Crawler
+321:Burrower
+322:Rumbler
+323:Tartarus Anomaly
+324:Bolster Xeno
+325:Worshipper
+326:Amplifying Mass
+327:Darkon Destroyer
+328:Lull Fiend
+329:Seraph
+330:Vigil
+331:Peacekeeper
+332:Benediction
+333:Purifying Rider
+334:Stoic Accorder
+335:Barrier
+336:Energy Skimmer
+337:Flamethrower
+338:Defender Pods
+339:Rancor
+340:Extinguisher of Light
+341:Blaster
+342:Reloader
+343:Binary
+344:Rox Chainblade
+345:Razogoth's Heir
+346:Abominable Horror
+347:Hovering Pest
+348:Partisan
+349:Guardian Walker
+350:Templar
+351:Angelwing
+352:Support Carrier
+353:Beetle Bomber
+354:Swarmling
+355:Escort Azusu
+356:Surveyor Drones
+357:Praetor
+358:Impeding Tank
+359:Credo Flak
+360:Evacuaters
+361:Prosper Capsule
+362:Credo Defender
+363:Mech Aid
+364:Contaminant Scour
+365:Indebted Veteran
+366:Blitz
+367:Pylon
+368:Eagletron
+369:Havenship
+370:Reconnoiter
+371:Selfless Soldier
+372:Mobile Command
+373:Calypso
+374:Night Ranger
+375:Smokestack
+376:Disciple
+377:Vengeant
+378:Blight Spawn
+379:Adamantite Armor
+380:Guardian Mech
+381:Stinger
+382:Mongrel
+383:Buzz Slicer
+384:Spirited Conscript
+394:Salvager
+395:Photon Walker
+396:Hydropod
+397:Xeno Overlord
+405:Gun Runner
+406:Bloodsucker
+407:Blight Master
+409:Vengeful Remora
+410:T-46 Leonidas
+411:Ranger Lieutenant
+412:Centurion
+413:Exogrunt
+414:Carbine
+415:Twinblade
+416:Devourer
+417:Sidewinder
+418:Revoker
+419:Brawler
+420:Repenter
+421:Righteous Punisher
+422:Grenadier
+423:Lance Rider
+424:Captor
+425:Xanadu
+426:Apollo
+427:Viper
+428:Turbo Commando
+429:Sacred Assassin
+430:Wasteland Skimmer
+431:Gorivore
+432:Arachnous
+433:Equalizer
+434:Shrouded Defiler
+435:Elemental
+436:Executioner
+437:Pharos
+438:Reclaimer
+439:Insanity Germ
+440:Pestilent Injector
+441:Kyrios
+442:Heli-Duster
+443:Toxic Corruptor
+444:Reclamax
+445:T-4 Medivac
+446:Rocket Ballista
+447:Collapsible Rig
+448:Deadblow
+449:Lionheart
+450:Gearhead
+451:Vulture
+452:Shaded Hollow
+453:Cog Fist
+454:Ironside
+455:Forge-Seared Tank
+457:Outfitted Scow
+458:Araquanid
+459:Quilled Blaster
+460:Rotted Mortar
+461:STOVL Carrier
+462:Placid Glider
+463:Orbo the Wrathful
+464:Pandemonium
+465:Pulsifier
+466:Bio Launcher
+467:Boundless Blight
+468:Elite Diver
+469:Utopia Beacon
+470:Tainted Whip
+471:Xeno Landrunner
+472:Patrol Cruiser
+473:Revolution
+474:Silent Surveyor
+475:Clipper
+476:Diminisher
+477:Taloc
+478:Doom Cannon
+479:Bulbous Slug
+480:Watchful Gaze
+481:Egor
+482:Transceiver Mech
+483:Volatile Wrecker
+484:Necrogeddon
+485:Eclipse Cycle
+486:Blitz Precursor
+487:Lucent Rider
+488:Zephyr Funnel
+489:Spiritual Infantry
+490:Venorax
+491:Shield Bearer
+492:Radiant Dawnbringer
+493:Chaos Swarm
+494:Guerilla Leader
+495:Teslatank
+496:Blight Devourer
+497:Pantheon Progeny
+498:Soot Launcher
+499:Lich
+500:Sundering Ogre
+506:Headless Stalker
+508:Demon
+509:Deranged Hunter
+510:Phantom
+511:Psycho
+512:Infected Trooper
+513:Hades
+514:Cloaked Exarch
+515:Microgen
+516:Kor Challenger
+517:Ectoplasm
+518:Heracles
+519:Hades
+520:Elusive Panzer
+521:Armored Slab
+522:Savior
+523:Special Forces
+524:Ravenous Dredge
+525:Ozeous
+526:Avatar
+527:Destructive Ram
+528:Realm Traverser
+529:Solitary Mech
+530:Solar Powerhouse
+531:Nemesis
+532:Revered Monk
+533:Ricochet
+534:Subterfuge
+535:Hephatat
+536:Pathfinder
+537:Abominable Raksha
+538:Slider
+539:Hephatat
+540:Bulging Mantis
+541:Mesa Trekker
+542:Flux Blaster
+543:Rhino
+545:Acidic Burst
+546:Trailblazer
+547:Lurking Carrier
+548:Forsaken
+549:Engulfing Horror
+550:Skin Carver
+551:Obliterator
+552:Kapak, the Deceiver
+553:Scepter
+563:Paladin
+564:Hover Pod
+565:Pulsebot
+566:Neonyte
+567:G-60 Thunder
+568:Undertaker
+569:Scorpic Scavenger
+570:Blitz Buzzers
+571:Boreback
+572:Hexidac
+573:Steadfast Cannon
+574:X8 Gunboat
+575:Pitbull
+576:Ruthless Brute
+577:Raptor
+578:Prepped Ward
+579:Kogoth, the Consumer
+580:Jet Enforcer
+581:Gladius
+582:Deep Harrier
+583:Nightcrawler
+584:Plated Brute
+585:Jagatai
+586:Cyborg Slayer
+587:Disposer
+588:Kyxlite
+589:Barbarian
+590:Resilient Guardian
+591:Adaptable Mechsuit
+592:Buster
+593:Blindside
+594:T-20 Oppressor
+595:Sub Delver
+596:Tibidor
+597:Apparition
+598:APX Duelo
+599:Bahamut
+600:Battle Mount
+601:Wretched Crow
+602:Infested Hull
+603:Carnivore
+604:Rouser
+605:Sycophant
+606:Ayrkrane
+607:Ronin
+608:Retriever
+609:Interdictor
+610:Delphan
+611:Flash Breaker
+612:Infrablaze
+613:Dark Wings
+614:SwiftWing
+615:Pulverizer
+616:Pox Strictor
+617:Quadrishot
+618:Extinguisher
+619:Sickle Slither
+620:Turbo Maniac
+621:Terror
+622:Support Rover
+623:Glider Hauler
+624:Iron Maiden
+625:Tormentor
+626:Neverender
+627:Beta Zoid
+628:Fate Herald
+629:Bloodwings
+630:Gallant Medic
+631:Rugged Nomad
+632:Repromancer
+633:Kilgore
+634:Marshal
+635:Insanior
+636:Slug Borg
+637:Slayer
+638:Corrupt Archfiend
+639:Smog Unit
+640:Blessed Reckoner
+641:Diablo
+642:Enclave Siegeship
+643:Rampage
+644:Widowmaker
+645:Assailant
+646:Divinator
+647:Gigagoth
+648:Hypersonic
+649:Fusillade
+650:Lead Trooper
+651:Theodysseus
+652:Repulsive Pest
+653:Twister
+654:Burst Hail
+655:Thunder Crag
+656:Scarab
+657:Sonar Sentry
+658:Graverobber
+659:Destiny Crafter
+670:Plasma Spark
+671:Rescue Pod
+672:Razing Madcap
+673:Bruiser
+674:Covert Armor
+675:Shrieker
+676:Gouger
+677:Hellgazer
+678:Sickle
+679:Perplexer
+680:Mobile Fortress
+681:Sensei
+682:Blight Tainter
+683:Xillafang
+684:Jungle Savior
+685:Metatron
+686:Gallant Knight
+687:Credo Master
+688:Staticopter
+689:Molgator
+690:Abducter
+691:Medi-Droid
+692:Tireless Veteran
+693:Crack Shot
+694:Watchman
+695:Fanatic
+696:Maul
+697:Scrap Wing
+698:Gasher
+699:Insignia Gunner
+700:Render
+701:Transmitter
+702:Thunderer
+703:Scrapper
+704:Illumus
+705:Defiance
+706:Heaving Mass
+707:Arcid
+708:Pungent
+709:Scav Idol
+710:Transude
+711:Razogoth Reborn
+712:Sliver Jet
+713:Fang
+714:Shrike
+715:Honor Guard
+716:Monarch
+717:Tazerok
+718:Strum
+719:Gravity Distorter
+720:Meteor
+721:Hygeia
+722:Servant of Light
+723:Pinion
+724:Slag Driller
+725:Hijacker
+726:Bulwark Guard
+727:Hunter Spotter
+728:Chaos Scab
+729:Tracer
+730:Holy Mercenary
+731:Sunspear
+732:Armadillo
+733:Nazdor
+734:Reaver
+735:Plague Burster
+736:Lasher
+737:Radio Officer
+738:Sabertooth
+739:Filth Spreader
+740:Hemorrhage
+741:Shatter Bone
+742:Snap Seeper
+743:Endurance
+744:Deflector
+745:Splinter
+746:Barricade Slasher
+747:Exoskeleton
+748:Warp Sculptor
+749:Shredder
+750:Asp
+751:Eviscerator
+752:Atelier
+753:Warden
+754:Falcon
+755:Martyr
+756:Joltrek Skiff
+757:Retainer of Faith
+758:Israfel
+759:Plasma Slurper
+760:Rift Fabricator
+761:Hope Mason
+762:Blockade Tank
+763:Claw Wheeler
+764:Canker Tooth
+765:Mending Exosuit
+766:Drake
+767:Splicer
+768:Mite
+769:Egg Infector
+770:Electro Marksman
+771:Scimitar Exosuit
+773:Ramble Rover
+774:Firebrand
+775:Soulsteel Mount
+776:Flesh Reaper
+777:Flash Tank
+778:Hazard Bolter
+779:Spew Glider
+780:Lightning Strider
+781:Kendar's Legacy
+782:Shear Blade
+783:Phantasm
+784:Sting Rash
+788:Blood Wraith
+789:Skitter Weavil
+790:Waver Lander
+791:Grit Horn
+792:Gatling Runner
+793:Casket
+795:Splinter Engine
+796:Javelin
+797:Centimani
+798:Fleet Reservoir
+802:Wingclipper
+803:Peacebringer
+804:Scope Cannon
+805:Sphinx
+807:Moonsilver Plate
+808:Fenorix
+809:Phaseid
+810:Snareslip
+811:Ferrojack
+812:Salvo Skulk
+813:Bolster Auto
+814:Virus Pumper
+815:Bloat Wasp
+816:Whirl Missile
+817:Striding Plight
+818:Drill Gunner
+819:Severjack
+820:Sinew Lasher
+821:Rolling Arsenal
+822:Flux Track
+823:Rapier
+824:Pylos Wagon
+825:Charrionite
+826:Split Jaw
+827:Jackal Claw
+828:Ophanim's Blade
+829:Marrow Aileron
+830:Tiamat
+831:Iron Maiden
+832:Comet Tail
+833:The Bullet
+834:Tyrelus
+835:Omen Seeker
+836:Springtail
+837:Vivisectionist
+838:Butcherbird
+839:Muninn Tank
+840:Crusher Mandible
+841:Wight
+842:Sound Virtue
+843:Grimlighter
+844:Scrap Collector
+845:Herald of Purity
+846:Huginn Squad
+847:Gorgon
+848:Drake Tooth
+849:Retribution
+850:Balefire
+851:Dark Revenant
+852:Ophiuchus
+853:Acid Athenor
+854:Witch Nail
+855:Extinction Engine
+856:Council's Mercy
+857:Zodiac
+858:Damascus' Blade
+859:Mantis Scythe
+860:Equidae
+861:Ayrkrane
+862:Necrogeddon
+863:Azure Reaper
+864:Pip, Epic Arbiter
+865:Withersnap
+866:Ram's Head
+867:Olin's Blade
+868:Shockwave Hammer
+869:Kazzerrot
+870:Amp Trooper
+871:Torment Surgeon
+872:Galian Tank
+873:Clamber Husk
+874:Mobile Armory
+875:Infernal Scout
+876:Phase Lancer
+877:Spire Raider
+878:Scale Hull
+879:Plasma Extractor
+880:Volingar
+881:Repurposed Soldier
+882:Slithoid Frame
+883:Kezerus of Blades
+884:Fane Guardian
+885:Rejuvenation Warden
+886:Buzz Slasher
+887:Fire Wing
+888:Nephilim Knight
+889:Apsara
+890:Chayot
+891:Xerotrox
+892:Brain Sucker
+893:Nest Weaver
+894:Tread Python
+895:Silver Edge
+896:Serak
+897:Landshark
+898:Vitality Carriage
+899:Whaleborne Colossal
+900:Pyro Cannon
+901:DNA Assimilator
+902:Shadow of Peace
+903:Stag Beetle
+904:Far Eye
+905:Junk Transport
+906:Katterank
+907:Gene Reader
+908:Blessed Knight
+909:Hero's Path
+910:Everlasting Hope
+911:Purging Cannon
+912:Folly of Pride
+913:Slug Cruiser
+914:Celerity Sprinter
+915:Test of Mettle
+916:Tumult Inducer
+917:Freight Carrier
+918:Cinder Cannon
+919:Turtle Shell
+920:Morningstar
+921:Yigird's Ruin
+922:Sting Mites
+923:Ixort
+924:Chiron
+925:Breakerknot
+926:Nephele
+927:Chitter Stutter
+928:Hell Wing
+929:Membrane Shredder
+930:Hellspont
+931:Jixi'rath
+932:Slither Miner
+933:Armory Generator
+934:Gene Corrupter
+935:Chosen of Light
+936:Eternity's Reign
+937:Divine Hubris
+938:Severed Enlightenment
+939:Soulfurnace
+940:Procyon
+941:Anointed Chalice
+942:Biowaste Disposer
+943:Xeno Interceptor, Lvl2
+944:Razor, Lvl2
+945:Hellion, Lvl2
+946:Sand Crawler, Lvl2
+947:Sharpshooter, Lvl2
+948:Hatchet, Lvl2
+949:Mizar VIII
+950:Toxic Cannon, Lvl2
+951:Tactical Infiltrator, Lvl2
+952:Nemesis, Lvl2
+953:Auger Tank, Lvl2
+954:Lodestar, Lvl2
+955:Groteske, Lvl2
+956:Fenrir, Lvl2
+957:Odin, Lvl2
+958:Carnivore, Lvl2
+959:Impaler, Lvl2
+960:X-5 Penetrator, Lvl2
+961:Hypersonic, Lvl2
+962:Malgoth, Lvl2
+964:Vigil, Lvl2
+965:Recurring Darkness, Lvl2
+966:Sidewinder, Lvl2
+967:Solar Powerhouse, Lvl2
+968:Chronos, Lvl2
+969:Exodrone, Lvl2
+970:World Quaker, Lvl2
+971:Nightcrawler, Lvl2
+972:Ozeous, Lvl2
+973:Jet Trooper, Lvl2
+974:Radiant Dawnbringer, Lvl2
+975:Colossus, Lvl2
+976:Feral Scorpion, Lvl2
+977:Adaptable Mechsuit, Lvl2
+978:Draconian Queen
+979:Omega
+981:Orwold's Reckoning
+982:Springkill
+983:Heart of Corruption
+984:Darkwing Archer
+985:Valentina
+987:Manta, Lvl2
+988:Desolate Sage, Lvl2
+989:Rhino, Lvl2
+990:Templar, Lvl2
+991:Ronin, Lvl2
+992:Venomous Raptor, Lvl2
+993:Abolisher, Lvl2
+994:Stormrunner, Lvl2
+995:Cannon Walker, Lvl2
+996:Nightmare, Lvl2
+997:Hornet Drones, Lvl2
+998:Concussive Guard, Lvl2
+1000:Cyrus
+1002:Elena
+1003:Whisper
+1004:Lord of Tartarus
+1005:Gustmich
+1006:Lord Alexander
+1007:Natasha
+1010:Morgan
+1011:Mayumi
+1012:The Butcher
+1013:Bianca
+1014:Bloody Mary
+1015:Thadius
+1017:Duncan
+1018:Isabelle
+1019:Eva
+1020:Hydraulis
+1021:Atlas
+1022:Freddie
+1023:Petrisis
+1024:Skullkeeper
+1025:Ajax
+1026:Yurich
+1029:Malort
+1031:Dalia
+1032:Boris
+1033:Xaedan
+1034:Vik
+1035:Ryoko
+1036:Dementia
+1037:Alaric
+1038:The Oracle
+1041:Barracus
+1043:Terrogor
+1045:Dracorex
+1049:Lord Halcyon
+1050:Invasion Coordinator
+1051:Vyander
+1054:Sidoze
+1082:Aiko
+1083:Lucina
+1097:Attalia
+1098:Maion
+1099:Empress
+1100:Cassandra
+1101:Deacon
+1102:Korvald
+1104:Stavros
+1105:Opak
+1115:Zander
+1116:Gaia
+1120:Emanuel
+1121:Daizon
+1122:Ningeco
+1123:Lucina the Wicked
+1141:Tabitha
+1152:Svetlana
+1153:Daedalus
+1154:Patriarch
+1155:Samantha
+1156:Ghoulerc
+1157:Corilane
+1171:Nexor
+1172:Teiffa
+1173:Jekel
+1180:Vengar
+1181:Gabriel
+1182:Gialdrea
+1183:Caitalia
+1184:Kleave
+1185:Miradren
+1186:Laird
+1197:Wildareo
+1198:Virulentus
+1199:Lord Silus
+1200:Corra
+1201:Vauntellion
+1202:Constantine
+1203:Halcyon the Corrupt
+1204:Halcyon the Corrupt
+1207:Typhon Vex
+1220:Anzix
+1221:Nikolas
+1222:Verlock
+1223:Balthazar
+1224:Nyler'ot
+1225:Yuletta
+1226:Gnorlock
+1236:Skullkeeper, Lvl2
+1237:Barracus, Lvl2
+1238:Dracorex
+1240:Xaedan, Lvl2
+1241:Arkadios
+1242:Cassius
+1243:Naz'rryt
+1245:Yurich, Lvl2
+1246:Atlas, Lvl2
+1247:Morgan, Lvl2
+1248:Moya
+1249:Dom
+1250:Kiz'ark
+1251:Nargoss
+1252:Petrisis, Lvl2
+1253:Freddie, Lvl2
+1262:Octane
+1263:Ligizon
+1266:Alaric Rejuvenated
+1267:Pikon
+1268:Mayumi, Lvl2
+1278:Gaia, Lvl2
+1279:Vyander Hazix
+1280:Diandra
+1281:Marrowtok
+1283:Miradren, Lvl2
+1291:Svetlana, Infectious Host
+1295:Kleave, Lvl2
+2000:Foundry
+2001:Power Generator
+2002:Photon Dish
+2003:Medic Bay
+2004:SkyCom
+2005:Sulfuris Acid Pit
+2006:Rally Flag
+2007:Invasion Blockade
+2008:Artillery Encampment
+2009:Noxious Den
+2010:Absorption Shield
+2011:Harbor Command
+2012:Asylum
+2013:Regeneration Bay
+2014:ComSat Terminal
+2015:Orbital Cannon
+2016:Raider Wall
+2017:Blight Tower
+2018:Magnification Relay
+2019:Cloning Laboratory
+2020:Earthquake Generator
+2021:Tesla Cannon
+2023:Command Center
+2024:Missile Silo
+2025:Xeno Singularis
+2027:Petrol Rig
+2028:Enclave Pylon
+2029:Fortified Extractor
+2030:Communications Array
+2031:Blood Pool
+2032:Blood Wall
+2033:Xeno Forcefield
+2034:Mirror Wall
+2035:Panopticon
+2036:Sanctuary
+2037:Raider Encampment
+2038:Warehouse
+2040:Necro Nest
+2044:Profaned Growth
+2046:Machine Mill
+2047:Assembly Plant
+2049:Festering Wasteland
+2050:Essence Gatherer
+2051:Mystic Obelisk
+2052:Fulfilling Myst
+2053:Destructive Portal
+2054:Pulse Emitter
+2055:Tartarus Pits
+2056:Teslafield
+2057:Mortar Bunker
+2058:Gatling Tower
+2059:Unstable Dynamo
+2060:Xeno Fortress
+2061:Adytum
+2062:Pantheon
+2063:Righteous Barricade
+2064:Holy Beacon
+2065:Fortified Cannons
+2066:Pulsating Bunker
+2067:Waypoint
+2068:Orbital Shield
+2069:Blight Geyser
+2070:Offshore Platform
+2071:Enclave Signal
+2076:Haze Geyser
+2077:Drop Pod
+2079:Bridge of Destiny
+2080:Panic Disperser
+2081:Mobile Base
+2082:Signal Towers
+2083:Engulfing Chasm
+2084:Sustained Wall
+2085:Landing Pods
+2086:Arms Depot
+2087:Imperial Refuge
+2088:Acropolis
+2090:Prism
+2091:Forward Base
+2092:Energy Spiker
+2093:Mark of Conquest
+2095:Aquatic Epicenter
+2096:Interstellar Battery
+2097:Blightbulb
+2098:Energy Containment
+2099:Bursting Spore
+2100:Shrapnel Engine
+2101:Boot Camp
+2102:Crumbling Remains
+2103:Radiant Cultivator
+2104:Pantheon Shard
+2105:Web of Madness
+2106:Outpost
+2107:Sanguinary Stalk
+2108:Exalted Memorial
+2109:Righteous Hold
+2110:Shuddering Keep
+2111:Corpulent Barrier
+2112:Mark of Hope
+2113:Armory
+2114:Haven
+2115:Flare of Courage
+2116:Rust Egress
+2117:Zarak
+2118:Enclave Warp Gate
+2119:Acid Spout
+2121:Mortar Tower
+2122:Metalworks
+2124:Beam Gate
+2125:Spore Pod
+2126:Repair Bay
+2127:Gene Manipulator
+2128:Skull Core
+2129:Shrine of Hope
+2130:Conversion Hall
+2131:Powerplant
+2132:Spider Den
+2133:Salvage HQ
+2134:Command Base
+2135:Genetics Pit
+2136:Bio-Sarcophagus
+2137:Rendering Plant
+2138:Core Excavator
+2139:Warpway Fortress
+2140:Relay Station Alpha
+2141:Gatling Tower, Lvl2
+2142:ComSat Terminal, Lvl2
+2143:Enclave Signal, Lvl2
+2144:SkyCom, Lvl2
+2145:Temple of Faith
+2146:Mech Dock
+2147:Charnel Pit
+2148:Arms Depot, Lvl2
+2149:Warehouse, Lvl2
+2150:Tri-Beam
+2151:Worldship Beacon
+2152:Mech Garage
+2153:Research Center
+2154:Desecrated Idol
+2155:Cypher Station
+2156:Blessed Factory
+2157:Holy Laboratory
+2158:Mortar Bunker, Lvl2
+2159:Blood Pool, Lvl2
+2160:Fusion Silo
+2161:Shining Cathedral
+2162:Enclave Terminal
+2163:Earthquake Generator
+2165:Absorption Barrier
+2166:Overloaded Skycom
+2167:Shadowy Abyss
+2168:Everlasting Mecca
+2169:Essence Gatherer, Lvl2
+2171:Blight Tower, Lvl2
+2172:Matter Regen Bay
+2173:Hungry Blood Pool
+2174:Obsidian Mirror
+2178:Cannon Wall
+2179:Aquatic Epicenter, Lvl2
+2180:Landmine
+2181:Ion Chamber
+2183:Tempest Hold
+2184:Pantheon Shard, Lvl2
+2185:Pantheon, Lvl2
+2186:Invix Source
+3000:Airstrike
+3001:Halt Advance
+3002:Mend Wounds
+3003:Demolish
+3004:Electromagnetic Pulse
+3005:Irradiation
+3006:Pandemic
+3007:Chaos Wave
+3008:Glorious Assault
+3009:Death from Above
+3010:Massive Assault
+3011:Tactical Support
+3012:Sabotage
+3015:Multi-Strike
+3016:Impede Assault
+3017:Maximum Damage
+3018:Full Power
+3020:Revitalize
+3021:Emergency Fire
+3022:Smash and Grab
+3023:Additional Support
+3024:Plague
+3025:Exhaust
+3026:Injection
+3027:Destruction
+3028:Acid Splash
+3029:Halcyon's Cleansing
+3030:Plasma Field
+3031:Cover Fire
+3038:Crippling Barrier
+3041:Relinquish Power
+3042:Replenishing Ray
+3043:Induce Madness
+3045:Flare Singularity
+3046:Vortex
+3047:Missile Barrage
+3048:Neutron Purge
+3049:Radiance
+3050:Sap
+3051:Typhon's Orders
+3052:Absolving Mists
+3054:Power Surge
+3055:Enrichment Vial
+3056:Gene Splice
+3057:Shatter Bomb
+3058:Comet Missile
+3059:Destruction, Lvl2
+3060:Airstrike, Lvl2
+3061:Death from Above, Lvl2
+3062:Sniper Shot
+3063:Chaos Wave, Lvl2
+3064:Charged Purge
+3065:Launch Codes
+3066:Maximum Damage, Lvl2
+3067:Genetic Chem
+3068:Demonic Power
+3069:Chaos Vortex
+4002:Grim Specter, Lvl2
+4003:Pharos, Lvl2
+4004:Buster, Lvl2
+4005:Slayer, Lvl2
+4006:Killstar Screamer
+4007:Hammerhead
+4008:Jynwroth Leviathan
+4009:Divine Detachment
+4010:Marius
+4011:Ax Ripper
+4012:Twincannon Buoy
+4013:Myriad Tank
+4014:Pherous
+4015:Cutlass
+4016:Invigilator
+4017:Pustule Tide
+4018:Knifarum
+4019:Mobile Extractor, Lvl2
+4020:Vomitryke
+4021:Scablet
+4022:Purge Cadet
+4023:Windreaver
+4024:Repeater Cannon
+4025:Hedgehog
+4026:Rumble Mule
+4027:Gore Crab
+4028:Scythe Drone
+4029:Anima Sapper
+4030:Mending Sanctum
+4031:Blight Master, Lvl2
+4032:Mech Aid, Lvl2
+4033:Flux Blaster, Lvl2
+4034:Ixnedrone, Lvl2
+4035:Raging Prowler, Lvl2
+4036:Credo Mech, Lvl2
+4037:Force Breaker, Lvl2
+4038:Reclaimer, Lvl2
+4039:APX Duelo, Lvl2
+4040:Hexidac, Lvl2
+4041:Beholder, Lvl2
+4042:Tartarus Anomaly, Lvl2
+4043:Support Carrier, Lvl2
+4044:Black Ops, Lvl2
+4045:Sustainer Xolan, Lvl2
+4046:Ravenous Beast, Lvl2
+4047:Son of Kohr
+4048:Helios, Lvl2
+4049:Mech Walker, Lvl2
+4050:Enclave Champion, Lvl2
+4051:Pyro Rig, Lvl2
+4052:Plague Wyrm, Lvl2
+4053:Beam Cannon, Lvl2
+4054:Equalizer, Lvl2
+4055:Pitbull, Lvl2
+4056:Cadmian
+4057:Outwork Treads
+4058:Wildfire
+4059:Vinior
+4060:Shell Mortar
+4061:Creeping Sluagh
+4062:Cyclops
+4063:Jorn's Tusk
+4064:Kinarax
+4065:Balor
+4066:Vorigon
+4067:Wurm
+4068:Valor Guard
+4069:The Augur
+4070:Promethium
+4071:Nerve Cluster
+4072:Stinger Slider
+4073:Wolf Spider
+4074:Spiral Fire
+4075:Omega, Lvl2
+4076:Omega, Lvl2
+4077:Predator, Lvl2
+4078:Anvil, Lvl2
+4079:Whiplash, Lvl2
+4080:Missile Launcher, Lvl2
+4081:Parasite, Lvl2
+4082:Barrier, Lvl2
+4083:Trident, Lvl2
+4084:Smokestack, Lvl2
+4085:Vanquisher, Lvl2
+4086:Hazzarous Bane
+4087:Cobra
+4088:Netherlites
+4089:Incarnate
+4090:Mirage Killer
+4091:Fleshcraft
+4092:Overmind
+4093:Judgement
+4094:Sabreshock
+4095:Rocket Elite
+4096:Nova
+4097:Decimator
+4098:Sniper Squad
+4099:Ky'riak
+4100:Springer
+4101:Tzo'rin
+4102:Sand Runner
+4103:Malakim
+4104:Sceptor's Hand
+4105:Nanites
+4106:Vilion
+4107:Darkmetal Cannon
+4108:Cloud Stalker
+4109:Kilzorin
+4110:Camael
+4111:Word's Host
+4112:Choir of Pain
+4113:Olympian
+4114:Powered Spearman
+4115:Joltrek Skiff, Lvl2
+4116:Zero, Lvl2
+4117:Fighter Jet, Lvl2
+4118:Deadblow, Lvl2
+4119:Bloodsucker, Lvl2
+4120:Realm Traverser, Lvl2
+4121:Revered Monk, Lvl2
+4122:Rox Chainblade, Lvl2
+4123:Kapak, the Deceiver, Lvl2
+4124:Monsoon X, Lvl2
+4125:Calypso, Lvl2
+4126:Mobile Command, Lvl2
+4127:Photon Walker, Lvl2
+4128:Bulging Mantis, Lvl2
+4129:Paladin, Lvl2
+4130:Rustler
+4131:Gristle Tooth
+4132:Usial
+4133:Kor's Vengeance
+4134:Requiem
+4135:Tiryns
+4136:Hoplon
+4137:Ferralkin
+4138:Demipyre
+4139:Dirge
+4140:Mawmite
+4141:Agrius
+4142:Arion
+4143:Earth Bane
+4144:Invader Hunter
+4145:Nexusisite
+4146:Star Khan
+4147:Justice
+4148:Thule Hound
+4149:Atomic Barrage
+4150:Havoc Alpha
+4151:Howling Malgoth
+4152:Dormant Parasite
+4153:Shackle Scour
+4154:Lightning Spinner
+4155:Steel Giant
+4156:Carrion Wight
+4157:Dawn Striker
+4158:Ashgrinder
+4159:Heartsteel
+4160:Bridgeburner
+4161:Rot Fiend
+4162:Shellek
+4163:Oblatum
+4164:Skuller
+4165:Long Eye
+4166:Final Mercy
+4167:Razor Unit
+4168:Worldbreaker
+4169:Hammerthorn
+4170:Regnant
+4171:Xebari
+4172:Sprintpod
+4173:Primus
+4174:Ospry
+4175:Erelim
+4176:Shapeshifter
+4177:Optio
+4178:Earthshaker
+4179:Carnoid
+4180:Fervor
+4181:Iso Walker
+4182:Sever Squid
+4183:Venorax
+4184:Toxic Tank
+4185:Turbo Hydroblade
+4186:Sustained Nimbus
+4187:Stealth Dreadship
+4188:Holy Benediction
+4189:Pulse Protector
+4190:Hulking Prowler
+4191:Power Roller
+4192:Realm Devourer
+4193:Thunder Mauler
+4194:Merciful Noble
+4195:Infectious Scourge
+4196:Stalking Wisp
+4197:Storm Impeder
+4198:Rigorous Isolator
+4199:Overwatcher
+4200:Heavy Watch
+4201:Swift Strangler
+4202:Savage Mastodon
+4203:Brutasaur
+4204:Relentless Slasher
+4205:Loyal Arrester
+4206:Splinterwing, Lvl2
+4207:Utopia Beacon, Lvl2
+4208:Carrion Retriever, Lvl2
+4209:Sica
+4210:Necarian
+4211:Red Ox
+4219:Blighted Sac
+4220:Infected Scythe
+4221:GDR Infantry
+4222:GDR Battle Suit
+4223:Smog Tank, Lvl2
+4224:Abominable Horror, Lvl2
+4225:Theodysseus, Lvl2
+4226:Pulsifier, Lvl2
+4227:Plunderer
+4228:Scythe Overseer
+4229:Molecule Converter
+4230:Elite Diver, Lvl2
+4231:Extinguisher, Lvl2
+4232:Asp, Lvl2
+4233:Smog Unit, Lvl2
+4234:Hekatonchires
+4235:Displacer
+4236:Gremlin
+4237:Converts
+4238:Masterwork Aegis
+4239:Blight Slammer
+4240:Solemn Vigil
+4241:Vulcar X38
+4242:Gore Wheels
+4243:Hopper
+4244:Rotterskik
+4245:Web Thrower
+4246:Hunter Seeker
+4247:Rat Catcher
+4248:Cockatrice
+4249:Hyper Chronos
+4250:Double Agent
+4251:Flux Eye
+4252:Point Knitter
+4253:Aggeroth
+4254:Apex Overdrive
+4255:Pantheon's Light
+4256:Tornado
+4259:Mammoth Tank
+4260:Metatron, Lvl2
+4261:Jagatai, Lvl2
+4262:Whaleborne Colossal, Lvl2
+4263:Moonsilver Plate, Lvl2
+4264:Galian Tank, Lvl2
+4265:Boundless Blight, Lvl2
+4266:Dominator, Lvl2
+4267:Phoenix, Lvl2
+4268:Hurricane
+4269:Ripper
+4270:Festerling
+4272:Talon
+4273:Gauntlet
+4274:Selearo
+4278:Goreus
+4279:Xiotic
+4280:Gelerin
+4281:Imperator Veyr
+4282:Cadaver Fiend
+4283:Hammer of Scion
+4287:Drift Light
+4288:Frost Bite
+4294:Pyro Rig
+4295:Pyro Rig, Lvl2
+4296:Templar
+4297:Templar, Lvl2
+4299:Gorrus
+4301:Grimclaw
+4302:Gorepox
+4306:Flux Track, Lvl2
+4307:Mist Skulker
+4308:Barricade Wrecker
+4309:Ancient Stalwart
+4310:Pursuer
+4315:Breakthrough
+4316:Deathtrap
+4317:Lion's Mane
+4318:Mutilater
+4319:Terraformer
+4320:Word's Host, Lvl2
+4321:Knifarum, Lvl2
+4322:Hellspont, Lvl2
+4323:Balefire, Lvl2
+4324:Muninn Tank, Lvl2
+4325:Silver Edge, Lvl2
+4326:Electro Marksman, Lvl2
+4327:Skin Carver, Lvl2
+4328:Marrow Aileron, Lvl2
+4329:Vilion, Lvl2
+4330:Doom Cannon, Lvl2
+4331:Marmoda, Lvl2
+4332:Mawcor, Lvl2
+4333:Hierophant, Lvl2
+4334:Kyrios, Lvl2
+4335:Lionheart, Lvl2
+4336:Raptor, Lvl2
+4337:Volatile Wrecker, Lvl2
+4338:Daemon, Lvl2
+4339:Suppressor
+4340:Nightmare Hellion
