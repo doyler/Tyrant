@@ -1559,3 +1559,9 @@
 4338:Daemon, Lvl2
 4339:Suppressor
 4340:Nightmare Hellion
+4341:Rolling Ram
+4342:Roughshod
+4343:Animus
+4347:Bloom
+4348:Sporscism
+4349:Infected Spire

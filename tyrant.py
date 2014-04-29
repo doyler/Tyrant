@@ -36,7 +36,7 @@ class tyrant_test(object):
     def getHash(self, time, message):
         reqHash = hashlib.md5()
         reqHash.update(message)
-        reqHash.update(self.myTime)
+        reqHash.update(time)
         reqHash.update(self.time_hash)
         reqHash = reqHash.hexdigest()
         return reqHash
@@ -70,7 +70,7 @@ class tyrant_test(object):
                 deck.insert(0, cid)
                 continue
             deck.append(cid)
-        hash = ''
+        deckHash = ''
         deck.sort()
         i = 0
         while i < len(deck):
@@ -82,7 +82,7 @@ class tyrant_test(object):
                 continue
             else:
                 #print '9: ' + str(cid)
-                hash += self.base64encode(cid)
+                deckHash += self.base64encode(cid)
                 #print '10: ' + hash
             cnt = 0
             while i < len(deck) and deck[i] == cid:
@@ -90,15 +90,15 @@ class tyrant_test(object):
                 i += 1
             if cnt > 1:
                 #print '11: ' + str(cnt)
-                hash += self.base64encode(8000 + cnt)
+                deckHash += self.base64encode(8000 + cnt)
                 #print '12: ' + hash
-        return hash
+        return deckHash
 
     def base64encode(self, card):
-        offset = 0
+        #offset = 0
         extra_char = ''
         if card > 4000:
-            offset = 4000
+            #offset = 4000
             #print 'marco: ' + str(card)
             card = card - 4000
             #print 'polo: ' + str(card)
@@ -159,38 +159,45 @@ class tyrant_test(object):
         return json_data
 
     def battleUsersAndOutput(self, members, count):
-        myTyrant.setUserFlag("autopilot", "1") #auto-fight
-        myTyrant.setActiveDeck("3") #deck slot #3
+        self.setUserFlag("autopilot", "1") #auto-fight
+        self.setActiveDeck("3") #deck slot #3
         values = []
         valueToAdd = ''
         counter = 0
         for member in members["members"]:
             valueToAdd = members["members"][member]["name"] + ":" + members["members"][member]["user_id"] + ":"
-            print valueToAdd
-            fight = myTyrant.doArenaFight(members["members"][member]["user_id"])
+            #print valueToAdd
+            fight = self.doArenaFight(members["members"][member]["user_id"])
             #print json.dumps(fight)
-            deck = myTyrant.cards[int(fight["defend_commander"])]
+            deck = self.cards[int(fight["defend_commander"])]
             cards = []
             cards.append(int(fight["defend_commander"]))
             for key in fight["card_map"]:
                 if int(key) > 10:
-                    deck += ", " + myTyrant.cards[int(fight["card_map"][key])]
-                    cards.append(int(fight["card_map"][key]))
+                    cardId = int(fight["card_map"][key])
+                    if (len(str(abs(cardId))) == 5):
+                        cardId = int(str(cardId)[1:])
+                    deck += ", " + self.cards[cardId]
+                    cards.append(cardId)
                     #print deck
-            valueToAdd += myTyrant.hash_encode(cards)
+            valueToAdd += self.hash_encode(cards)
             values.append(valueToAdd)
             counter += 1
             time.sleep(2)
             if count != "MAX" and counter == count:
                 break
-        myTyrant.setActiveDeck("2")
-        myTyrant.setUserFlag("autopilot", "0")
+        self.setActiveDeck("2")
+        self.setUserFlag("autopilot", "0")
         with open('members_output.txt', 'wb') as f:
             for value in values:
                 f.write(value + '\r\n')
-        
-myTyrant = tyrant_test()
-myTyrant.init()
-myTyrant.loadCardList()
-members = myTyrant.getFactionMembers()
-myTyrant.battleUsersAndOutput(members, 1)
+
+def main():        
+    myTyrant = tyrant_test()
+    myTyrant.init()
+    myTyrant.loadCardList()
+    members = myTyrant.getFactionMembers()
+    myTyrant.battleUsersAndOutput(members, len(members["members"]))
+
+if __name__=='__main__':
+	main()
