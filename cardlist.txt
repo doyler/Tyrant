@@ -1193,6 +1193,11 @@
 2184:Pantheon Shard, Lvl2
 2185:Pantheon, Lvl2
 2186:Invix Source
+2190:Forward Base, Lvl2
+2191:Missile Silo, Lvl2
+2192:Bursting Spore, Lvl2
+2193:Core Excavator, Lvl2
+2194:Sanctuary, Lvl2
 3000:Airstrike
 3001:Halt Advance
 3002:Mend Wounds
@@ -1565,3 +1570,23 @@
 4347:Bloom
 4348:Sporscism
 4349:Infected Spire
+4350:Strum, Lvl2
+4351:Watchman, Lvl2
+4352:Bulwark Guard, Lvl2
+4353:Myrmidon, Lvl2
+4354:Nephele, Lvl2
+4355:Rotted Mortar, Lvl2
+4356:Landshark, Lvl2
+4357:Barbarian, Lvl2
+4358:Razogoth Reborn, Lvl2
+4359:Egor, Lvl2
+4360:Graverobber, Lvl2
+4361:Repurposed Soldier, Lvl2
+4362:Warp Sculptor, Lvl2
+4363:Disposer, Lvl2
+4364:Sliver Jet, Lvl2
+4365:Beetle Bomber, Lvl2
+4366:Defiance, Lvl2
+4367:Sacred Assassin, Lvl2
+4368:Apparition, Lvl2
+4369:Martyr, Lvl2

@@ -98,10 +98,7 @@ class tyrant_test(object):
         #offset = 0
         extra_char = ''
         if card > 4000:
-            #offset = 4000
-            #print 'marco: ' + str(card)
             card = card - 4000
-            #print 'polo: ' + str(card)
             extra_char = '-'
         base64string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
         #print 'f of card: ' + str(card) + ' is: ' + str(int(math.floor(card/64)))
